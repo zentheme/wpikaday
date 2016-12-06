@@ -16,7 +16,7 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
 		};
 
 		// Set all non-null control params
-		['format', 'position', 'i18n'].forEach( value => {
+		getDatepickerParamNames().forEach( value => {
 
 			if( typeof control.params[value] !== "undefined" ) {
 				paramsObj[value] = control.params[value];
@@ -25,6 +25,28 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
 
 		// Create the Pikaday Object
 		new Pikaday( paramsObj );
+	}
+
+	function getDatepickerParamNames() {
+		return [
+			'trigger', 
+			'bound', 
+			'position', 
+			'reposition', 
+			'format', 
+			'formatStrict', 
+			'defaultDate', 
+			'setDefaultDate', 
+			'firstDay', 
+			'disableWeekends', 
+			'yearRange', 
+			'showWeekNumber', 
+			'isRTL', 
+			'i18n', 
+			'yearSuffix', 
+			'showMonthAfterYear', 
+			'showDaysInNextAndPreviousMonthsrendering', 
+			'theme'];
 	}
 
 	// The datepicker gets buried under the overlay container when added to an input, so up the z-index to the overlay container+1 to make it visible.

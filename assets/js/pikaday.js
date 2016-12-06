@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
 			};
 
 			// Set all non-null control params
-			['format', 'position', 'i18n'].forEach(function (value) {
+			getDatepickerParamNames().forEach(function (value) {
 
 				if (typeof control.params[value] !== "undefined") {
 					paramsObj[value] = control.params[value];
@@ -39,8 +39,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		for (var _iterator = datepickers[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
 			_loop();
 		}
-
-		// The datepicker gets buried under the overlay container when added to an input, so up the z-index to the overlay container+1 to make it visible.
 	} catch (err) {
 		_didIteratorError = true;
 		_iteratorError = err;
@@ -56,6 +54,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
 		}
 	}
 
+	function getDatepickerParamNames() {
+		return ['trigger', 'bound', 'position', 'reposition', 'format', 'formatStrict', 'defaultDate', 'setDefaultDate', 'firstDay', 'disableWeekends', 'yearRange', 'showWeekNumber', 'isRTL', 'i18n', 'yearSuffix', 'showMonthAfterYear', 'showDaysInNextAndPreviousMonthsrendering', 'theme'];
+	}
+
+	// The datepicker gets buried under the overlay container when added to an input, so up the z-index to the overlay container+1 to make it visible.
 	var overlayZindex = window.getComputedStyle(document.querySelector('.wp-full-overlay')).getPropertyValue('z-index');
 	var singlePikas = document.querySelectorAll('.pika-single');
 	var _iteratorNormalCompletion2 = true;

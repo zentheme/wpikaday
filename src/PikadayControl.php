@@ -5,7 +5,7 @@
  *
  * @see https://github.com/dbushell/Pikaday The Pikaday project on github.
  * 
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 namespace Zentheme\Customizer\Control;
@@ -165,7 +165,7 @@ class PikadayControl extends WP_Customize_Control {
 
 		parent::to_json();
 
-		$params =  ['format', 'position', 'i18n'];
+		$params =  $this->getDatepickerParamNames();
 		array_walk( $params, [$this, 'setJsonParam'] );
 	}
 
@@ -220,4 +220,27 @@ class PikadayControl extends WP_Customize_Control {
 			$this->json[$name] = $this->$name;
 		}
 	}
+
+	private function getDatepickerParamNames() {
+		return [
+			'trigger', 
+			'bound', 
+			'position', 
+			'reposition', 
+			'format', 
+			'formatStrict', 
+			'defaultDate', 
+			'setDefaultDate', 
+			'firstDay', 
+			'disableWeekends', 
+			'yearRange', 
+			'showWeekNumber', 
+			'isRTL', 
+			'i18n', 
+			'yearSuffix', 
+			'showMonthAfterYear', 
+			'showDaysInNextAndPreviousMonthsrendering', 
+			'theme'];
+	}
 }
+

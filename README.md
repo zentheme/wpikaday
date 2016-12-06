@@ -19,7 +19,7 @@ As this project uses [PSR-4](http://www.php-fig.org/psr/psr-4/) autoloading you 
 Below is a simple example of how the control might be used in a plugin or theme. The example assumes that the `vendor/autoload.php` file has already been included.
 
 ```php
-use Zentheme\Customizer\Pikaday\PikadayControl;
+use Zentheme\Customizer\Control\PikadayControl;
 
 // Projects customizer configuration
 add_action( 'customize_register', function( $wpCustomize ) {
