@@ -1,0 +1,29 @@
+# Handle line endings automatically for files detected as text
+# and leave all files detected as binary untouched.
+* text=auto
+
+## The above will handle all files NOT found below
+## These files are text and should be normalized (Convert crlf => lf)
+
+# source code
+*.php text
+*.js text
+*.json text
+
+# git config
+.gitattributes text
+.gitignore text
+.gitconfig text
+
+# Documentation
+*.md text
+LICENSE text
+
+# Exclude sass and other build files out of the archive/release.
+**/build/			export-ignore
+.gitattributes		export-ignore
+.gitignore			export-ignore
+.babelrc			export-ignore
+composer.json		export-ignore
+gulpfile.babel.js	export-ignore
+package.json		export-ignore

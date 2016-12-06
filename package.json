@@ -1,0 +1,22 @@
+{
+  "name": "zentheme-pikaday",
+  "version": "1.0.0",
+  "description": "Pikaday builder.",
+  "main": "gulpfile.babel.js",
+  "private": true,
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "path": "^0.12.7",
+    "run-sequence": "^1.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zentheme",
+  "license": "ISC"
+}

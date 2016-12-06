@@ -1,0 +1,20 @@
+{
+    "name": "zentheme/wpikaday",
+    "description": "A Pikaday calendar Control for Wordpress customizer.",
+    "homepage": "https://github.com/zentheme/wpikaday",
+    "license": "MIT",
+    "keywords": ["wordpress customizer", "calendar", "pikaday"],
+    "authors": [
+        {
+            "name": "John Dundon",
+            "email": "john@zenthe.me",
+            "homepage": "http://zenthe.me"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0"
+    },
+    "autoload": {
+        "psr-4": { "Zentheme\\Customizer\\Control\\": "src/" }
+    }
+}

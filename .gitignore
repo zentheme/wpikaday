@@ -1,0 +1,6 @@
+# Dependency directories
+vendor/
+node_modules/
+
+# Dependency config
+composer.lock
